@@ -124,7 +124,7 @@ function RestaurantDisplay(){
        </svg>}
        </button>
        <div className="card-footer" style={{backgroundColor:"black",textAlign:"center"}}>
-          <button type="button" className="btn btn-link" onClick={()=>{getRestaurantLanding(res._id,res.restaurantName)}} style={{color:"white",textDecoration:"none",padding:"0"}}><h5 className="card-title" style={{backgroundColor:"black", width:"66%"}}>{`${res.restaurantName}`}</h5></button>
+          <button type="button" className="btn btn-link" onClick={()=>{getRestaurantLanding(res._id,res.restaurantName)}} style={{color:"white",textDecoration:"none",padding:"0"}}><h5 className="card-title" style={{backgroundColor:"black", width:"361px"}}>{`${res.restaurantName}`}</h5></button>
        </div>
         </div>
           </Col>
