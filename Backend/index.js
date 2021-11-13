@@ -17,7 +17,7 @@ const upload = multer({dest : "uploads/"})
 
 
 
-app.use(cors({ origin: `http://localhost:3000`, credentials: true }));
+app.use(cors({ origin: `http://13.56.184.154:3000`, credentials: true }));
 
 app.use(
   session({
@@ -67,7 +67,7 @@ app.use(bodyParser.json());
 // app.use(express.json());
 
 app.use((req,res,next) => {
-  res.setHeader("Access-Control-Allow-Origin","http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Origin","http://13.56.184.154:3000");
   res.setHeader("Access-Control-Allow-Credentials",'true');
   res.setHeader("Access-Control-Allow-Methods","GET,HEAD,OPTIONS,POST,PUT,DELETE,UPDATE");
   res.setHeader("Access-Control-Allow-Headers","Access-Control-Allow-Method,Access-Control-Allow-Headers,Origin,Accept,X-Requested-With,Content-type");

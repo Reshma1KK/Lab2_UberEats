@@ -25,7 +25,7 @@ function RestaurantSignup() {
       const headers = new Headers();
       if(isValid){
       Axios.defaults.withCredentails = true;
-        Axios.post("http://localhost:3001/RestaurantSignup", {
+        Axios.post("http://13.56.184.154:3001/RestaurantSignup", {
         name:restaurantName,
         email:email,
         password:restaurantPassword,
@@ -164,7 +164,7 @@ function RestaurantSignup() {
      <button onClick={restaurantSignup} type="button" className="btn btn-outline-primary">Continue</button>
      </div>
      <div>
-     <h2 style={{textAlign:"center",fontSize:"1.1rem", fontFamily:"Poppins'"}}>Have an Account?<a href="http://localhost:3000/RestaurantLogin" style={{color:"green", fontSize:"1rem"}}>Sign In</a></h2>
+     <h2 style={{textAlign:"center",fontSize:"1.1rem", fontFamily:"Poppins'"}}>Have an Account?<a href="http://13.56.184.154:3000/RestaurantLogin" style={{color:"green", fontSize:"1rem"}}>Sign In</a></h2>
      </div>
      </div>
    );

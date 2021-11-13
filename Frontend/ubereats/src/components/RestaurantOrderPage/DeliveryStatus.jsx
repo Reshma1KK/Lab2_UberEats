@@ -22,7 +22,7 @@ const customerName=names[0];
 
 
 const updateCartTable = () => {
-    Axios.put("http://localhost:3001/AddDeliveryStatus",{
+    Axios.put("http://13.56.184.154:3001/AddDeliveryStatus",{
       delivery:delivery,
       customerName:customerName,
       restaurantName:restaurantName

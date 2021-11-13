@@ -25,11 +25,11 @@ function Favorites() {
     },[]);
     const name=JSON.parse(localStorage["user"])["name"];
     const getFavorites = () => {
-      // Axios.get("http://localhost:3001/Dishes.jsx")
+      // Axios.get("http://13.56.184.154:3001/Dishes.jsx")
       // .then(response => console.log(response))
       // .catch(err => console.log("failed:",err));
     Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-        Axios.post("http://localhost:3001/GetFavorites",{
+        Axios.post("http://13.56.184.154:3001/GetFavorites",{
           customer_id:JSON.parse(localStorage.getItem("user"))["_id"],
         })
         .then((response) => {

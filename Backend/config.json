@@ -7,5 +7,5 @@
     "database":"uberEats_schema"
   },
   "secret":"UberEatsDatabase",
-  "frontEnd":"http://localhost:3000"
+  "frontEnd":"http://13.56.184.154:3000"
 }

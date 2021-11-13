@@ -15,7 +15,7 @@ function Order({order}){
 
 
   const updateCartTable = () => {
-      Axios.put("http://localhost:3001/AddDeliveryStatus",{
+      Axios.put("http://13.56.184.154:3001/AddDeliveryStatus",{
         delivery:delivery,
         customerName:order.customer_name,
         restaurantName:order.restaurant_name,
@@ -37,7 +37,7 @@ function Order({order}){
     <div className="container-fluid">
       <div className="row">
         <div className="col">
-       <a href="http://localhost:3000/DisplayProfile" onClick={()=>(localStorage.setItem("customer",order.customer_name))}>{order.customer_name}</a>
+       <a href="http://13.56.184.154:3000/DisplayProfile" onClick={()=>(localStorage.setItem("customer",order.customer_name))}>{order.customer_name}</a>
         </div>
         <div className="col">
       {`${JSON.stringify(order.total_qty).replace(/[^\w\s]/gi," ")}`}

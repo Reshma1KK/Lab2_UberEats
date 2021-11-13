@@ -17,7 +17,7 @@ function CreateReciept({}) {
       const getAllCustomerData = () =>{
 
       Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-        Axios.post("http://localhost:3001/Reciept",{
+        Axios.post("http://13.56.184.154:3001/Reciept",{
                   temp:localStorage.getItem("temp")
         })
         .then((response) => {

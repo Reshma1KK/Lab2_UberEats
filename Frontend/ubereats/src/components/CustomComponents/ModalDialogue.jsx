@@ -18,7 +18,7 @@ const goBack = (e) =>{
 }
 
 const getNewOrder = () =>{
-  Axios.delete("http://localhost:3001/DeleteCart")
+  Axios.delete("http://13.56.184.154:3001/DeleteCart")
     localStorage.setItem("cartVal",(localStorage.getItem("resName")));
     history.goBack();
   console.log("Deleted!");

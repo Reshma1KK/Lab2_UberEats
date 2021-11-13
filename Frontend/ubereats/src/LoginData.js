@@ -1,11 +1,11 @@
 const LoginData=[
   {
-    href: "http://localhost:3000/RestaurantAndCustomerLogin.jsx",
+    href: "http://13.56.184.154:3000/RestaurantAndCustomerLogin.jsx",
     pageName: "Restaurant?"
 
   },
   {
-    href: "http://localhost:3000/RestaurantAndCustomerLogin",
+    href: "http://13.56.184.154:3000/RestaurantAndCustomerLogin",
     pageName: "Customer?"
   }
 ];

@@ -26,7 +26,7 @@ function CustomerOrders() {
       const getAllCustomerData = () =>{
       Axios.defaults.headers.common.authorization=localStorage.getItem("token");
         setLoading(true);
-        Axios.get("http://localhost:3001/CustomerFilter")
+        Axios.get("http://13.56.184.154:3001/CustomerFilter")
         .then((response) => {
            // if((JSON.parse(localStorage.getItem("user"))[0]["restaurantName"]) === (dash.restaurantName))
              const allCustomerData = response.data.data;

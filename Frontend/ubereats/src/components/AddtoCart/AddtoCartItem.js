@@ -24,7 +24,7 @@ const [cartItems,getCartItems]=useState([]);
 
 
 const removeItemFromCart = () =>{
-  Axios.post("http://localhost:3001/RemoveFromCart",{
+  Axios.post("http://13.56.184.154:3001/RemoveFromCart",{
    _id:localStorage.getItem("DeletedDish"),
  })
  const newList = cartItemsPresent.filter((cart) =>cart._id!=localStorage.getItem("DeletedDish"));

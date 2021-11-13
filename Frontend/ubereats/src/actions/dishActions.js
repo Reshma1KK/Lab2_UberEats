@@ -18,7 +18,7 @@ export const listDishes = () => async(dispatch) => {
   try{
     dispatch({ type: DISHES_LIST_REQUEST })
     Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-    const { data } = await Axios.post("http://localhost:3001/Dishes",{
+    const { data } = await Axios.post("http://13.56.184.154:3001/Dishes",{
       res_id:JSON.parse(localStorage.getItem("user"))["_id"]
     })
 
@@ -41,7 +41,7 @@ export const listRestaurants = () => async(dispatch) => {
   try{
     dispatch({ type: RESTAURANT_LIST_REQUEST })
     Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-    const { data } = await   Axios.get("http://localhost:3001/RestaurantDisplay")
+    const { data } = await   Axios.get("http://13.56.184.154:3001/RestaurantDisplay")
 
     dispatch ({
       type:RESTAURANT_LIST_SUCCESS,
@@ -61,7 +61,7 @@ export const listRestaurantDetails = () => async(dispatch) => {
   try{
     dispatch({ type: RESTAURANT_DETAILS_REQUEST })
     Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-    const { data } = await   Axios.post("http://localhost:3001/CustomerRestaurantLanding",{
+    const { data } = await   Axios.post("http://13.56.184.154:3001/CustomerRestaurantLanding",{
       _id:localStorage.getItem("resToOpen"),
     })
 
@@ -83,7 +83,7 @@ export const listCustomerDishes = () => async(dispatch) => {
   try{
     dispatch({ type: CUSTOMER_DISHES_LIST_REQUEST })
     Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-    const { data } = await Axios.post("http://localhost:3001/CustomerDishes",{
+    const { data } = await Axios.post("http://13.56.184.154:3001/CustomerDishes",{
       res_id:localStorage.getItem("resToOpen"),
     })
 

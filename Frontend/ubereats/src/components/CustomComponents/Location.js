@@ -11,7 +11,7 @@ function Location ({allValues}) {
 
   const addOldAddress = () => {
   Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-    Axios.put("http://localhost:3001/OldLocation",{
+    Axios.put("http://13.56.184.154:3001/OldLocation",{
       location:newLocation,
       current_order:true
     }).then(response =>{
@@ -22,7 +22,7 @@ function Location ({allValues}) {
   }
   const addNewAddress = () => {
   Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-    Axios.put("http://localhost:3001/NewLocation",{
+    Axios.put("http://13.56.184.154:3001/NewLocation",{
       location:location,
       currentOrder:true
     }).then(response =>{

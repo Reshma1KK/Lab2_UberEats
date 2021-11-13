@@ -29,13 +29,13 @@ function AddDishes() {
     formData.append("originalname",dishImg);
     console.log("image here",dishImg)
     Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-    Axios.post("http://localhost:3001/AddDishImg", formData)
+    Axios.post("http://13.56.184.154:3001/AddDishImg", formData)
     .then((response) =>{
       console.log(response.data.imagePath);
       setDishImg(response.data.imagePath);
       const imagePath = response.data.imagePath;
     Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-    Axios.post("http://localhost:3001/AddDishes",{
+    Axios.post("http://13.56.184.154:3001/AddDishes",{
       res_id:JSON.parse(localStorage.getItem("user"))["_id"],
       dishName:dishName,
       dishIngredients:dishIngredients,

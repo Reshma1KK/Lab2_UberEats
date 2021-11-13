@@ -21,7 +21,7 @@ function AddtoCart (){
 
     const getAllCartItems = () => {
       Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-      Axios.post("http://localhost:3001/GetOrder",{
+      Axios.post("http://13.56.184.154:3001/GetOrder",{
         current_order:true
       })
       .then((response) =>{

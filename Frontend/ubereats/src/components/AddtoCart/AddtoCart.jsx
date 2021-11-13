@@ -18,7 +18,7 @@ function AddtoCart (){
 
 
    const getAllCartItems = () => {
-      Axios.get("http://localhost:3001/AddtoCartModal")
+      Axios.get("http://13.56.184.154:3001/AddtoCartModal")
       .then((response) =>{
         console.log("Inside Cart");
         const cartData = response.data.cartItems;

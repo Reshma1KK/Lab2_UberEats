@@ -3,7 +3,7 @@ import { CART_ADD_ITEM } from "../constants/cartConstants"
 
 
 export const addToCart = (id,qty) => async (dispatch,getState) => {
-  const { data } = await Axios.get("http://localhost:3001/AddtoCartModal")
+  const { data } = await Axios.get("http://13.56.184.154:3001/AddtoCartModal")
 
     dispatch ({
       type: CART_ADD_ITEM,

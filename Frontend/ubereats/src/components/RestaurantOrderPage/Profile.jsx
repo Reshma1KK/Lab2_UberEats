@@ -14,7 +14,7 @@ function Profile() {
     },[]);
     const getAllProfileData = () => {
         Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-          Axios.post("http://localhost:3001/CustomerProfile",{
+          Axios.post("http://13.56.184.154:3001/CustomerProfile",{
             name:localStorage.getItem("customer"),
           })
           .then((response) =>{

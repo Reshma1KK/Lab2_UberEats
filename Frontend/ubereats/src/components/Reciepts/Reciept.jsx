@@ -11,7 +11,7 @@ function Reciept({order}){
 
   const cancelOrder = () =>{
     if(order.order_status==="New Order"){
-      Axios.put("http://localhost:3001/CancelNewOrderCustomer",{
+      Axios.put("http://13.56.184.154:3001/CancelNewOrderCustomer",{
         order_status:"Cancelled",
         temp:order.temp
         })

@@ -20,7 +20,7 @@ const restaurantLocation=restaurant.location;
 function addToFavorites(name,location,id) {
   Axios.defaults.headers.common.authorization=localStorage.getItem("token");
   setFavorite([...favorite,restaurant]);
-  Axios.post("http://localhost:3001/Favorites",{
+  Axios.post("http://13.56.184.154:3001/Favorites",{
     customer_id:JSON.parse(localStorage.getItem("user"))["_id"],
     restaurant_name:name,
     restaurant_location:location,

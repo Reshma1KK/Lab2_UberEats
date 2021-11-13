@@ -8,19 +8,19 @@ function NavBar() {
       <h1 className="heading-home home restuarnt">Uber <span className="heading-eats restuarnt">Eats</span> Business</h1>
       <ul className="nav justify-content-end">
         <li className="nav-item">
-        <a className="nav-link active" aria-current="page" href="http://localhost:3000/Edit">Edit Profile</a>
+        <a className="nav-link active" aria-current="page" href="http://13.56.184.154:3000/Edit">Edit Profile</a>
         </li>
         <li className="nav-item">
-        <a className="nav-link" href="http://localhost:3000/OrdersPage">Orders</a>
+        <a className="nav-link" href="http://13.56.184.154:3000/OrdersPage">Orders</a>
         </li>
         <li className="nav-item">
-        <a className="nav-link active" aria-current="page" href="http://localhost:3000/AddDishes">Add Dishes</a>
+        <a className="nav-link active" aria-current="page" href="http://13.56.184.154:3000/AddDishes">Add Dishes</a>
         </li>
         <li className="nav-item">
-        <a className="nav-link active" aria-current="page" href="http://localhost:3000/RestaurantLanding">Profile</a>
+        <a className="nav-link active" aria-current="page" href="http://13.56.184.154:3000/RestaurantLanding">Profile</a>
         </li>
         <li className="nav-item">
-        <a className="nav-link" href="http://localhost:3000/" onClick={()=>{localStorage.clear();}}>Logout</a>
+        <a className="nav-link" href="http://13.56.184.154:3000/" onClick={()=>{localStorage.clear();}}>Logout</a>
         </li>
       </ul>
     </div>

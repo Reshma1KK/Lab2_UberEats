@@ -40,7 +40,7 @@ const[qty,setQty] = useState(1)
         console.log("setting here")
         localStorage.setItem("cartVal",localStorage.getItem("resName"));
         setCart([...cart,dish]);
-        Axios.post("http://localhost:3001/AddtoCart",{
+        Axios.post("http://13.56.184.154:3001/AddtoCart",{
           customerName:customerName,
           dishName:dishName,
           restaurantName:restaurantName,
@@ -64,7 +64,7 @@ const[qty,setQty] = useState(1)
       }
       else{
           setCart([...cart,dish]);
-          Axios.post("http://localhost:3001/AddtoCart",{
+          Axios.post("http://13.56.184.154:3001/AddtoCart",{
             customerName:customerName,
             dishName:dishName,
             restaurantName:restaurantName,

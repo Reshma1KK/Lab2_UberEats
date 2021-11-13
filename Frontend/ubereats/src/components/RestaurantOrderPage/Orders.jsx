@@ -14,10 +14,10 @@ function Orders() {
     },[]);
 
     const getAllOrders = () => {
-      // Axios.get("http://localhost:3001/Dishes.jsx")
+      // Axios.get("http://13.56.184.154:3001/Dishes.jsx")
       // .then(response => console.log(response))
       // .catch(err => console.log("failed:",err));
-        Axios.get("http://localhost:3001/CartFilter")
+        Axios.get("http://13.56.184.154:3001/CartFilter")
         .then((response) => {
           const allOrders=response.data.data;
             getOrders(allOrders);

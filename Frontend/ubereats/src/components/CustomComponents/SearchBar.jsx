@@ -25,7 +25,7 @@ function SearchBar() {
 
   const getAllRestaurants = () =>{
     Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-    Axios.get("http://localhost:3001/RestaurantDisplay")
+    Axios.get("http://13.56.184.154:3001/RestaurantDisplay")
     .then((response) => {
       const AllRestuarntData=response.data.data.data;
       getRestuarants(AllRestuarntData);
@@ -36,11 +36,11 @@ function SearchBar() {
 
   const getAllDishes = () => {
     Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-    // Axios.get("http://localhost:3001/Dishes.jsx")
+    // Axios.get("http://13.56.184.154:3001/Dishes.jsx")
     // .then(response => console.log(response))
     // .catch(err => console.log("failed:",err));
     console.log("res_id",JSON.parse(localStorage.getItem("user"))["_id"])
-      Axios.post("http://localhost:3001/CustomerDishes")
+      Axios.post("http://13.56.184.154:3001/CustomerDishes")
       .then((response) => {
         console.log("dish name",response.data.dishes)
         console.log("dishes length",response.data.dishes)

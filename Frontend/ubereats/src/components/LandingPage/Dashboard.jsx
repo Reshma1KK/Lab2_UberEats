@@ -34,7 +34,7 @@ function Dashboard(){
 
       Axios.defaults.headers.common.authorization=localStorage.getItem("token");
       // Axios.defaults.headers.common = {'Authorization': `Bearer ${localStorage.getItem("token")}`}
-      Axios.post("http://localhost:3001/RestaurantLanding",{
+      Axios.post("http://13.56.184.154:3001/RestaurantLanding",{
         _id:JSON.parse(localStorage.getItem("user"))["_id"]
       })
       .then((response) => {

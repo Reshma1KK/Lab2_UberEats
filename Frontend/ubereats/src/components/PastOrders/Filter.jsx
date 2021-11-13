@@ -26,7 +26,7 @@ const[pickedUpIsChecked,setPickedUpIsChecked] = useState(false);
 
 const getAllOrders = () =>{
   Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-    Axios.get("http://localhost:3001/CustomerFilter")
+    Axios.get("http://13.56.184.154:3001/CustomerFilter")
     .then((response) => {
       console.log("your data",response.data.data)
       const allOrders=response.data.data;

@@ -25,7 +25,7 @@ function EditDishes(){
 
   function editDishName() {
     Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-      Axios.put("http://localhost:3001/EditDishName",
+      Axios.put("http://13.56.184.154:3001/EditDishName",
       {
         _id:localStorage.getItem("id"),
         newDishName:newDishName
@@ -37,13 +37,13 @@ function EditDishes(){
       const formData = new FormData();
       formData.append("originalname",newDishImg);
       console.log("image here",newDishImg)
-        Axios.post("http://localhost:3001/AddDishImg",formData)
+        Axios.post("http://13.56.184.154:3001/AddDishImg",formData)
         .then(res =>{
           console.log(res.data.imagePath);
           setNewDishImg(res.data.imagePath);
           const imagePath = res.data.imagePath;
           Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-          Axios.put("http://localhost:3001/UploadDishesImg",{
+          Axios.put("http://13.56.184.154:3001/UploadDishesImg",{
             _id:localStorage.getItem("id"),
             dish_img:imagePath,
           })
@@ -52,7 +52,7 @@ function EditDishes(){
 
   function editDishIngredients() {
     Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-      Axios.put("http://localhost:3001/EditIngredients",
+      Axios.put("http://13.56.184.154:3001/EditIngredients",
       {
         _id:localStorage.getItem("id"),
         newDishIngredients:newDishIngredients
@@ -62,7 +62,7 @@ function EditDishes(){
     }
   function editDishPrice() {
     Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-      Axios.put("http://localhost:3001/EditPrice",
+      Axios.put("http://13.56.184.154:3001/EditPrice",
       {
         _id:localStorage.getItem("id"),
         newDishPrice:newDishPrice,
@@ -72,7 +72,7 @@ function EditDishes(){
     }
   function editDishDescription() {
     Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-        Axios.put("http://localhost:3001/EditDishDescription",
+        Axios.put("http://13.56.184.154:3001/EditDishDescription",
         {
           _id:localStorage.getItem("id"),
           newDishDescription:newDishDescription
@@ -82,7 +82,7 @@ function EditDishes(){
       }
   function editDishCategory() {
     Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-        Axios.put("http://localhost:3001/EditCategory",
+        Axios.put("http://13.56.184.154:3001/EditCategory",
         {
         _id:localStorage.getItem("id"),
         newDishCategory:newDishCategory

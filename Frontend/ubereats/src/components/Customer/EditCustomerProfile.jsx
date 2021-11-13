@@ -30,7 +30,7 @@ function EditCustomerProfile() {
 
   const editCustomerName = () =>{
   Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-  Axios.put("http://localhost:3001/EditCustomerNameInCustomerSignUp",{
+  Axios.put("http://13.56.184.154:3001/EditCustomerNameInCustomerSignUp",{
     _id:JSON.parse(localStorage.getItem("user"))["_id"],
     name:localStorage.getItem("customerName"),
     newName:newName
@@ -51,13 +51,13 @@ function EditCustomerProfile() {
     const formData = new FormData();
     formData.append("originalname",customerPicture);
     console.log("image here",customerPicture)
-      Axios.post("http://localhost:3001/EditImg",formData)
+      Axios.post("http://13.56.184.154:3001/EditImg",formData)
       .then(res =>{
         console.log(res.data.imagePath);
         setCustomerPicture(res.data.imagePath);
         const imagePath = res.data.imagePath;
         Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-        Axios.put("http://localhost:3001/EditCustomerPhoto",{
+        Axios.put("http://13.56.184.154:3001/EditCustomerPhoto",{
           _id:JSON.parse(localStorage.getItem("user"))["_id"],
           profile_picture:imagePath,
         })
@@ -66,7 +66,7 @@ function EditCustomerProfile() {
 
   const editDOB = () =>{
   Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-  Axios.put("http://localhost:3001/EditCustomerDOB",{
+  Axios.put("http://13.56.184.154:3001/EditCustomerDOB",{
     _id:JSON.parse(localStorage.getItem("user"))["_id"],
     customerName:customerName,
     dob:dob
@@ -77,7 +77,7 @@ function EditCustomerProfile() {
 
   const editCity = () =>{
   Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-  Axios.put("http://localhost:3001/EditCustomerCity",{
+  Axios.put("http://13.56.184.154:3001/EditCustomerCity",{
     _id:JSON.parse(localStorage.getItem("user"))["_id"],
     customerName:customerName,
     city:city
@@ -86,7 +86,7 @@ alert("Updated successfully!");
   }
   const editState = () =>{
   Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-  Axios.put("http://localhost:3001/EditCustomerState",{
+  Axios.put("http://13.56.184.154:3001/EditCustomerState",{
     _id:JSON.parse(localStorage.getItem("user"))["_id"],
     customerName:customerName,
     state:state
@@ -95,7 +95,7 @@ alert("Updated successfully!");
   }
   const editCountry = () =>{
   Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-  Axios.put("http://localhost:3001/EditCustomerCountry",{
+  Axios.put("http://13.56.184.154:3001/EditCustomerCountry",{
     _id:JSON.parse(localStorage.getItem("user"))["_id"],
     customerName:customerName,
     country:country
@@ -104,7 +104,7 @@ alert("Updated successfully!");
   }
   const editNickName = () =>{
   Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-  Axios.put("http://localhost:3001/EditNickName",{
+  Axios.put("http://13.56.184.154:3001/EditNickName",{
     _id:JSON.parse(localStorage.getItem("user"))["_id"],
     customerName:customerName,
     nickName:nickName
@@ -113,7 +113,7 @@ alert("Updated successfully!");
   }
   const editEmail = () =>{
   Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-  Axios.put("http://localhost:3001/EditCustomerEmail",{
+  Axios.put("http://13.56.184.154:3001/EditCustomerEmail",{
     _id:JSON.parse(localStorage.getItem("user"))["_id"],
     customerName:customerName,
     email:email
@@ -123,7 +123,7 @@ alert("Updated successfully!");
   }
   const editNumber = () =>{
   Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-  Axios.put("http://localhost:3001/EditCustomerNumber",{
+  Axios.put("http://13.56.184.154:3001/EditCustomerNumber",{
     _id:JSON.parse(localStorage.getItem("user"))["_id"],
     customerName:customerName,
     phone:phone

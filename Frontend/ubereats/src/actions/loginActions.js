@@ -21,7 +21,7 @@ export const listCustomer = (email,password) => async(dispatch) => {
     }
     const headers =  new Headers();
     Axios.defaults.withCredentials=true;
-    const { data } = await Axios.post("http://localhost:3001/CustomerLogin",{
+    const { data } = await Axios.post("http://13.56.184.154:3001/CustomerLogin",{
       email:email,
       password:password
     }, config )
@@ -48,7 +48,7 @@ export const listRestaurant = () => async(dispatch) => {
   try{
     dispatch({ type: RESTAURANT_LOGIN_REQUEST })
     Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-    const { data } = await   Axios.get("http://localhost:3001/RestaurantDisplay")
+    const { data } = await   Axios.get("http://13.56.184.154:3001/RestaurantDisplay")
 
     dispatch ({
       type:RESTAURANT_LOGIN_SUCCESS,

@@ -25,7 +25,7 @@ const[veganIsChecked,setVeganIsChecked] = useState(false);
 
   const getAllRestaurants = () =>{
     Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-    Axios.get("http://localhost:3001/RestaurantDisplay")
+    Axios.get("http://13.56.184.154:3001/RestaurantDisplay")
     .then((response) => {
       const AllRestuarntData=response.data.data.data;
       getRestuarants(AllRestuarntData);

@@ -22,7 +22,7 @@ const[cancelledOrderIsChecked,setCancelledOrderIsChecked] = useState(false);
 
 const getAllOrders = () =>{
     Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-    Axios.get("http://localhost:3001/CartFilter")
+    Axios.get("http://13.56.184.154:3001/CartFilter")
     .then((response) => {
       const allOrders=response.data.data;
       console.log(allOrders)

@@ -22,7 +22,7 @@ function RestaurantLogin() {
         // Axios.defaults.withCredentails = true;
         const user={email,password};
         Axios.defaults.withCredentials=true;
-        Axios.post("http://localhost:3001/RestaurantLogin",
+        Axios.post("http://13.56.184.154:3001/RestaurantLogin",
         user
         ).then((response) => {
         if(response.data.message){

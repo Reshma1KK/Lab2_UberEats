@@ -20,7 +20,7 @@ function CustomerLogin() {
     // const[passwordList,setPasswordList]=useState("");
 
     // useEffect(() => {
-    //     Axios.get("http://localhost:3001/ShowPassword/Customer")
+    //     Axios.get("http://13.56.184.154:3001/ShowPassword/Customer")
     //     .then((response) => {
     //       setPasswordList(response.data);
     //     })
@@ -35,7 +35,7 @@ function CustomerLogin() {
       const isValid = formValidation();
       if(isValid){
       Axios.defaults.withCredentials=true;
-      Axios.post("http://localhost:3001/CustomerLogin",{
+      Axios.post("http://13.56.184.154:3001/CustomerLogin",{
         email:email,
         password:password
       }).then((response) => {

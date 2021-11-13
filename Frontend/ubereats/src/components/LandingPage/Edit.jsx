@@ -39,13 +39,13 @@ function editRestaurantImg(e) {
   const formData = new FormData();
   formData.append("originalname",image);
   console.log("image here",image)
-    Axios.post("http://localhost:3001/EditImg",formData)
+    Axios.post("http://13.56.184.154:3001/EditImg",formData)
     .then(res =>{
       console.log(res.data.imagePath);
       setImage(res.data.imagePath);
       const imagePath = res.data.imagePath;
       Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-      Axios.put("http://localhost:3001/UploadImg",{
+      Axios.put("http://13.56.184.154:3001/UploadImg",{
         _id:JSON.parse(localStorage.getItem("user"))["_id"],
         picture:imagePath,
       })
@@ -78,19 +78,19 @@ function editRestaurantImg(e) {
 
   function editRestaurantName() {
   Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-    Axios.put("http://localhost:3001/EditName", {
+    Axios.put("http://13.56.184.154:3001/EditName", {
       _id: JSON.parse(localStorage.getItem("user"))["_id"],
       newName: newName
     })
-    Axios.put("http://localhost:3001/EditNameinFav", {
+    Axios.put("http://13.56.184.154:3001/EditNameinFav", {
       _id: JSON.parse(localStorage.getItem("user"))["_id"],
       newName: newName
     })
-    Axios.put("http://localhost:3001/EditNameDishes", {
+    Axios.put("http://13.56.184.154:3001/EditNameDishes", {
       _id: JSON.parse(localStorage.getItem("user"))["_id"],
       newName: newName
     })
-    Axios.put("http://localhost:3001/EditNameCart", {
+    Axios.put("http://13.56.184.154:3001/EditNameCart", {
       _id: JSON.parse(localStorage.getItem("user"))["_id"],
       newName: newName
     })
@@ -100,7 +100,7 @@ function editRestaurantImg(e) {
 
   function editRestaurantLocation() {
   Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-    Axios.put("http://localhost:3001/EditLocation", {
+    Axios.put("http://13.56.184.154:3001/EditLocation", {
       _id: JSON.parse(localStorage.getItem("user"))["_id"],
       resName: JSON.parse(localStorage.getItem("user"))["restaurantName"],
       newLocation: newLocation,
@@ -111,7 +111,7 @@ function editRestaurantImg(e) {
 
   function editRestaurantDescription() {
   Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-    Axios.put("http://localhost:3001/EditDescription", {
+    Axios.put("http://13.56.184.154:3001/EditDescription", {
       _id: JSON.parse(localStorage.getItem("user"))["_id"],
       resName: JSON.parse(localStorage.getItem("user"))["restaurantName"],
       newDescription: newDescription
@@ -121,7 +121,7 @@ function editRestaurantImg(e) {
 
   function editRestaurantContact() {
   Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-    Axios.put("http://localhost:3001/EditContact", {
+    Axios.put("http://13.56.184.154:3001/EditContact", {
       _id: JSON.parse(localStorage.getItem("user"))["_id"],
       resName: JSON.parse(localStorage.getItem("user"))["restaurantName"],
       newContact: newContact
@@ -131,7 +131,7 @@ function editRestaurantImg(e) {
 
   function editRestaurantTimings() {
     Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-    Axios.put("http://localhost:3001/EditTimings", {
+    Axios.put("http://13.56.184.154:3001/EditTimings", {
       _id: JSON.parse(localStorage.getItem("user"))["_id"],
       resName: JSON.parse(localStorage.getItem("user"))["restaurantName"],
       newTimings: newTimings

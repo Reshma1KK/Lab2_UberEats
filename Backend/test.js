@@ -1,6 +1,6 @@
 var supertest = require("supertest");
 var should = require("should");
-var server = supertest.agent("http://localhost:3001");
+var server = supertest.agent("http://13.56.184.154:3001");
 var assert = require("assert");
 
 describe('View Customer Page And Dishes', function () {

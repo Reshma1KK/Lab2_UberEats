@@ -15,7 +15,7 @@ function Profile() {
 
     const getAllProfileData = () => {
           Axios.defaults.headers.common.authorization = localStorage.getItem('token');
-          Axios.post("http://localhost:3001/CustomerPage",{
+          Axios.post("http://13.56.184.154:3001/CustomerPage",{
             _id:JSON.parse(localStorage.getItem("user"))["_id"],
           })
           .then((response) =>{
@@ -71,7 +71,7 @@ function Profile() {
                <div className="col-lg-7 col-md-6 pl-xl-3">
                  <h5 className="font-weight-bold text-black">Find My Favorites: </h5>
                  <Link to="/Favorites">
-                 <p><a href="http://localhost:3000/Favorites" style={{color:"black"}}>Favorites</a></p>
+                 <p><a href="http://13.56.184.154:3000/Favorites" style={{color:"black"}}>Favorites</a></p>
                  </Link>
                  <h5 className="font-weight-bold text-black">About: </h5>
                  <p>{`${profileData["about"]}`}</p>
