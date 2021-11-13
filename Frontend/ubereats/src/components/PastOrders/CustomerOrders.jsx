@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import CustomerOrder from "./CustomerOrder.js"
 import Axios from "axios";
 import {Row,Col} from "react-bootstrap"
-
+import ReactPaginate from 'react-paginate';
 
 
 function CustomerOrders() {
@@ -82,6 +82,19 @@ function CustomerOrders() {
              </select>
          </div>
             {displayData}
+          <div style={{textAlign:"center",color:"#89B5AF"}}>
+            <ReactPaginate
+         previousLabel={"Previous"}
+         nextLabel={"Next"}
+         pageCount={pageCount}
+         onPageChange={changePage}
+         containerClassName={"paginationButtons"}
+         previousLinkClassName={"previousButton"}
+         nextLinkClassName={"nextButton"}
+         disabledClassName={"disabledButton"}
+         activeClassName={"activeButton"}
+         />
+         </div>
         </Row>
       </Fragment>
           )

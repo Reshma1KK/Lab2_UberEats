@@ -16,8 +16,7 @@ var Cart = require("../models/CartItemsModel")
         current_order:msg.currentOrder,
         dish_id:msg.dish_id,
         restaurant_id:msg.restaurant_id,
-        customer_id:msg.customer_id,
-        qty:msg.qty,
+        customer_id:msg.customer_id
       }
       Cart.findOne(cart, (error,data) => {
         if(error){
@@ -45,8 +44,7 @@ var Cart = require("../models/CartItemsModel")
              current_order:msg.currentOrder,
              dish_id:msg.dish_id,
              restaurant_id:msg.restaurant_id,
-             customer_id:msg.customer_id,
-             qty:msg.qty,
+             customer_id:msg.customer_id
           });
               newCart.save((insertErr,insertData) => {
               if(insertErr){

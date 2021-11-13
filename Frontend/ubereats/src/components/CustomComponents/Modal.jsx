@@ -3,11 +3,23 @@ import AddtoCart from "../AddtoCart/AddtoCart.jsx"
 // import image from "./addtocart.jpeg"
 
 import "./Modal.css"
-
+var getTotal ={};
+  var sum=0;
 export const Modal = ({closeModal}) => {
 
 
   const OrderFood = () => {
+
+    getTotal= JSON.parse(localStorage.getItem("newPrice"));
+    console.log("getTotal",getTotal)
+      Object.values(getTotal).forEach(val => {
+        sum+=val;
+        console.log("sum",sum)
+        console.log("val",val)
+      })
+
+
+    localStorage.setItem("total",sum)
     window.open("/OrderFood","_self");
   }
 

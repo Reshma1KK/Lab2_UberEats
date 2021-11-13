@@ -14,7 +14,6 @@ function CustomerDish({dish}) {
 const history = useHistory();
 const [showModal,setShowModal]=useState(true);
 const[myDish,setMyDish]=useState([]);
-const[qty,setQty] = useState(1)
  const[cart,setCart]=useState([]);
  const customerName = JSON.parse(localStorage["user"])["name"];
  const dishName=dish.dish_name;
@@ -23,14 +22,6 @@ const[qty,setQty] = useState(1)
  const dishCategory=dish.dish_category;
  const currentOrder=1;
 
-
- const increment=()=>{
-   setQty(qty+1);
- }
-
- const decrement=()=>{
-   setQty(qty-1);
- }
 
 
 
@@ -49,8 +40,7 @@ const[qty,setQty] = useState(1)
           currentOrder:currentOrder,
           dish_id:id,
           restaurant_id:localStorage.getItem("resToOpen"),
-          customer_id:JSON.parse(localStorage.getItem("user"))["_id"],
-          qty:qty,
+          customer_id:JSON.parse(localStorage.getItem("user"))["_id"]
         })
           localStorage.setItem("DishFrom",dish.res_name)
           alert("Items added to shopping Cart")
@@ -73,8 +63,7 @@ const[qty,setQty] = useState(1)
             currentOrder:currentOrder,
             dish_id:id,
             restaurant_id:localStorage.getItem("resToOpen"),
-            customer_id:JSON.parse(localStorage.getItem("user"))["_id"],
-            qty:qty,
+            customer_id:JSON.parse(localStorage.getItem("user"))["_id"]
           })
             alert("Items added to shopping Cart")
         }
@@ -95,9 +84,6 @@ const[qty,setQty] = useState(1)
         <h6 className="card-text">{`${dish.dish_description}`}</h6>
         <h6 className="card-text">{`${dish.dish_category}`}</h6>
         <h6 className="card-text"><small className="text-muted">{`${dish.dish_price}`}$</small></h6>
-        <button type="button" className="btn btn-outline-secondary btn-sm" style={{borderRadius:"100%",width:"0.1rem",fontSize:"20px"}} onClick={()=>{decrement(dish._id,dish.price)}}>-</button>
-        {qty}
-        <button type="button" className="btn btn-outline-secondary btn-sm" style={{borderRadius:"100%",width:"0.1rem",fontSize:"20px"}} onClick={()=>{increment(dish._id,dish.price)}}>+</button>
         <div style={{padding:"10px"}}>
         <button type="button" className="btn btn-success btn-md" onClick={()=>{
           addToCart(dish,dish._id)

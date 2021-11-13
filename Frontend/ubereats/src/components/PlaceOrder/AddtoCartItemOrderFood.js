@@ -6,8 +6,7 @@ import {Col} from "react-bootstrap";
 //localStorage.setItem("total",0);
 
 
-var sum=0;
-  var dish_qty={};
+
 function AddtoCartItemOrderFood({cart}) {
 
   // const [qty,setQty]=useState(1);
@@ -15,8 +14,6 @@ const currentOrder=true;
 
 const dishName=cart.dish_name;
 
-dish_qty[cart.dish_name]=cart.qty;
-localStorage.setItem("total_qty",JSON.stringify(dish_qty))
 
 
 
@@ -67,14 +64,10 @@ localStorage.setItem("total_qty",JSON.stringify(dish_qty))
       {cart.dish_name}
       </Col>
      <Col className="d-flex flex-row justify-content-center mt-3 p-2  rounded">
-      {cart.price*cart.qty}$
-      <div style={{color:"#D8E3E7"}}>
-      {sum = sum+(cart.price*cart.qty)}
-      {localStorage.setItem("total",sum)}
-      </div>
+      {cart.price}$
      </Col>
      <Col className="d-flex flex-row justify-content-center mt-3 p-2  rounded">
-      x{cart.qty}
+    { typeof(JSON.parse(localStorage.getItem("counter"))[cart.dish_name]) === "undefined" ? "x" + 1 : "x" +JSON.parse(localStorage.getItem("counter"))[cart.dish_name]  }
      </Col>
      </div>
      <hr />

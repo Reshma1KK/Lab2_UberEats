@@ -40,7 +40,7 @@ function Order({order}){
        <a href="http://13.56.184.154:3000/DisplayProfile" onClick={()=>(localStorage.setItem("customer",order.customer_name))}>{order.customer_name}</a>
         </div>
         <div className="col">
-      {`${JSON.stringify(order.total_qty).replace(/[^\w\s]/gi," ")}`}
+      {`${localStorage.getItem("counter").replace(/[^\w\s]/gi," ")}`}
         </div>
         <div className="col">
       {order.delivery_status}

@@ -28,7 +28,8 @@ router.post("/",checkAuth,(req,res) =>{
         nickname:data.data.nickname,
         favorites:data.data.favorites,
         country:data.data.country,
-        number:data.data.number
+        number:data.data.number,
+        about:data.data.about
       };
       res.status(200).json({payload});
     }

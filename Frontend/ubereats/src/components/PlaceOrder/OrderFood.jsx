@@ -11,6 +11,7 @@ const totalVal = localStorage.getItem("total");
 
 function OrderFood({total}){
 
+
     const [showModal,setShowModal]=useState(false);
     const [instructions, setInstructions]= useState("");
 
@@ -121,7 +122,7 @@ console.log("instructions",instructions)
     }
     />
     <label for="floatingInputValue"> Special Instructions</label>
-    <div className="d-flex flex-row justify-content-center mt-3 p-2 rounded container">TOTAL:{totalVal}$</div>
+    <div className="d-flex flex-row justify-content-center mt-3 p-2 rounded container">TOTAL:{localStorage.getItem("total")}$</div>
     <div className="justify-content-center rounded"><button className="btn btn-success btn-block btn-lg pay-button" type="button" style={{width:"90%", paddingTop:"10px",paddingBottom:"10px"}} onClick={OrderPlaced}>Place Order</button></div>
     </Col>
     </Row>

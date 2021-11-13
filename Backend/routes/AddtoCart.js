@@ -26,8 +26,7 @@ router.post("/",checkAuth, (req, res) => {
             current_order:data.data.current_order,
             dish_id:data.data.dish_id,
             restaurant_id:data.data.restaurant_id,
-            customer_id:data.data.customer_id,
-            qty:data.data.qty,
+            customer_id:data.data.customer_id
           };
           console.log("Successfully added to cart",payload);
           res.status(200).json({payload});
