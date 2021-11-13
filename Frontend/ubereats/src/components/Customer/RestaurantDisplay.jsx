@@ -90,7 +90,7 @@ function RestaurantDisplay(){
        </path>
        </svg>}
        </button>
-       <div className="card-footer" style={{backgroundColor:"black",textAlign:"center",width:"380px"}}>
+       <div className="card-footer" style={{backgroundColor:"black",textAlign:"center",width:"402px"}}>
           <button type="button" className="btn btn-link" onClick={()=>{getRestaurantLanding(res["_id"],res["restaurantName"])}} style={{color:"white",textDecoration:"none",padding:"0"}}><h5 className="card-title" style={{backgroundColor:"black",width:"380px"}}>{`${res["restaurantName"]}`}</h5></button>
        </div>
             </div>
@@ -123,7 +123,7 @@ function RestaurantDisplay(){
        </path>
        </svg>}
        </button>
-       <div className="card-footer" style={{backgroundColor:"black",textAlign:"center",width:"380px"}}>
+       <div className="card-footer" style={{backgroundColor:"black",textAlign:"center",width:"402px"}}>
           <button type="button" className="btn btn-link" onClick={()=>{getRestaurantLanding(res._id,res.restaurantName)}} style={{color:"white",textDecoration:"none",padding:"0"}}><h5 className="card-title" style={{backgroundColor:"black", width:"380px"}}>{`${res.restaurantName}`}</h5></button>
        </div>
         </div>
