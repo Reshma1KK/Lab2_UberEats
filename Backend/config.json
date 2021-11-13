@@ -1,0 +1,11 @@
+{
+  "DB": {
+    "host":"ubereatsdatabase1.cxfljchejmpw.us-east-2.rds.amazonaws.com",
+    "username":"root",
+    "password":"IchBishRoot_Int367",
+    "port":3306,
+    "database":"uberEats_schema"
+  },
+  "secret":"UberEatsDatabase",
+  "frontEnd":"http://localhost:3000"
+}

@@ -1,0 +1,25 @@
+.container {
+    margin-top: 200px
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.input-text:focus {
+    box-shadow: 0px 0px 0px;
+    border-color: #0000;
+    outline: 0px;
+}
+
+.form-control {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #eee;
+}
+
+.form-control.input-text.no-outlineno-outline:focus {
+  outline: none;
+}

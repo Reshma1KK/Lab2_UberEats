@@ -1,0 +1,151 @@
+/* home page */
+.heading-eats{
+  color: green;
+  font-size: 1.7rem;
+}
+.heading-home{
+  color: white;
+  font-size: 2rem;
+}
+/* .home {
+  margin: 10% 10%;
+} */
+.home-img{
+  position: absolute ;
+  width: 105%;
+  height: 100%;
+  justify-content: center;
+  text-align:  center;
+
+}
+.home{
+  position: absolute;
+  padding: 2rem;
+  /* margin: 1% 2%; */
+  font-size: 2rem;
+}
+.home-bar{
+  padding: 5px;
+  border: solid;
+}
+.para-home{
+  color: white;
+  font-size: 1rem;
+  padding: 8% 35%;
+  font-style: italic;
+  line-height: 1.5rem;
+}
+.home.btn.btn-dark:hover{
+  background-image: none;
+  background-color: #79B4B7;
+}
+.row{
+  padding: 0;
+}
+
+/* Customer Login */
+
+.form-floating{
+  text-align: center;
+  margin: 2% 30%;
+}
+.cutomer-button{
+  margin: 2% 5%;
+}
+.customer-heading{
+  text-align: center;
+  font-size: 2rem;
+  margin: 2% 5%;
+}
+.btn-customer{
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 15px;
+  border: 2px solid;
+  background: transparent;
+  margin: 24px;
+}
+/* Restaurant Login */
+
+.login{
+  color: green;
+}
+
+/* Restaurant Landing Page */
+.restaurantLanding-img{
+  width: 100%;
+  height: 50%;
+}
+.card-body{
+  text-align: center;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+.card-body.file{
+  font-size: 0.9rem;
+}
+.card-body{
+  text-align: center;
+  line-height: 0;
+}
+.card-text{
+  font-size: 1rem;
+}
+.dash{
+  margin: 7% 7%;
+  padding-top: 70px;
+}
+.restuarnt{
+  padding: 0;
+  top: 0;
+}
+.restaurant-NavBar{
+  background-color: black;
+}
+a.nav-link{
+  color: white;
+}
+ /* EDIT Page */
+.container-fluid.edit{
+  padding: 0;
+}
+
+/* Dishes */
+
+.card.dishes{
+  padding: 2% 3%;
+}
+
+/* Dashboard */
+.profile-img{
+  width: 75%;
+  height: 50%;
+}
+
+/* Customer profile */
+.customer-img{
+  margin: 3% 5%;
+  border-radius: 100%;
+  width: 100%;
+}
+.customer-body{
+  margin: 5% 7%;
+}
+.btn.btn-warning.btn-rounded{
+  border-radius: 12px;
+  margin: 7% 12%;
+  background-color: #6ECB63;
+}
+.btn.btn-warning.btn-rounded:hover{
+  color: #32502E;
+  background-color: #B1E693;
+}
+.restaurant-style{
+  margin: 3% 5%;
+}
+body{
+  font-family: sans-serif;
+}
+
+
+/* HTML Elements */
