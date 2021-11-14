@@ -11,7 +11,7 @@ function CustomerOrders() {
 // (JSON.parse(localStorage.getItem("user"))[0]["name"]) === (order.customer_name) ? getCustomerData(order) : ""
     const [pageSize,setPageSize]=useState(0);
     console.log("pageSize",pageSize);
-    const [posts,setPosts]=useState([]);
+    const [posts,setPosts]=useState();
     const [loading,setLoading]=useState(false);
     //set the page numbers
     const [pageNumber,setPageNumber]=useState(0);
@@ -75,7 +75,7 @@ function CustomerOrders() {
                  }
                }
              >
-               <option value="select">Page Size</option >
+               <option>Page Size</option>
                <option value="2">Page Size:2</option>
                <option value="5">Page Size:5</option>
                <option value="10">Page Size:10</option>
@@ -86,7 +86,7 @@ function CustomerOrders() {
             <ReactPaginate
          previousLabel={"Previous"}
          nextLabel={"Next"}
-         pageCount={pageCount}
+         pageCount={dataPerPage}
          onPageChange={changePage}
          containerClassName={"paginationButtons"}
          previousLinkClassName={"previousButton"}
