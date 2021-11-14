@@ -9,7 +9,6 @@ function CustomerOrderfilter({order}){
 
   const [showModal,setShowModal]=useState(false);
 
-if(order.customer_name === JSON.parse(localStorage.getItem("user"))["name"]){
 
   return(
      <div>
@@ -36,8 +35,6 @@ if(order.customer_name === JSON.parse(localStorage.getItem("user"))["name"]){
       </div>
     </div>
     )
-}
-return("")
 
 }
 

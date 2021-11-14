@@ -15,8 +15,6 @@ function CustomerOrder({order,posts,loading}){
   }
 
 
-
-if(order.customer_name === JSON.parse(localStorage.getItem("user"))["name"]){
   return(
      <div>
       <div className="container-fluid">
@@ -38,8 +36,6 @@ if(order.customer_name === JSON.parse(localStorage.getItem("user"))["name"]){
       </div>
     </div>
     )
-}
-return ("")
 
 }
 

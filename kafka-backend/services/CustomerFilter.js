@@ -11,6 +11,12 @@ const handle_request = async( msg, callback) => {
   Cart.aggregate(
     [
       {
+        $match:
+        {
+          "customer_id":msg._id
+        }
+      },
+      {
         $group:
         {
           "_id" : "$temp",

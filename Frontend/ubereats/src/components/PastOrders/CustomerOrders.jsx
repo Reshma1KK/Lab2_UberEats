@@ -11,7 +11,7 @@ function CustomerOrders() {
 // (JSON.parse(localStorage.getItem("user"))[0]["name"]) === (order.customer_name) ? getCustomerData(order) : ""
     const [pageSize,setPageSize]=useState(0);
     console.log("pageSize",pageSize);
-    const [posts,setPosts]=useState();
+    const [posts,setPosts]=useState([]);
     const [loading,setLoading]=useState(false);
     //set the page numbers
     const [pageNumber,setPageNumber]=useState(0);
@@ -26,7 +26,9 @@ function CustomerOrders() {
       const getAllCustomerData = () =>{
       Axios.defaults.headers.common.authorization=localStorage.getItem("token");
         setLoading(true);
-        Axios.get("http://13.56.184.154:3001/CustomerFilter")
+        Axios.post("http://13.56.184.154:3001/CustomerFilter",{
+          _id:JSON.parse(localStorage.getItem("user"))["_id"],
+        })
         .then((response) => {
            // if((JSON.parse(localStorage.getItem("user"))[0]["restaurantName"]) === (dash.restaurantName))
              const allCustomerData = response.data.data;
@@ -86,7 +88,7 @@ function CustomerOrders() {
             <ReactPaginate
          previousLabel={"Previous"}
          nextLabel={"Next"}
-         pageCount={dataPerPage}
+         pageCount={pageCount}
          onPageChange={changePage}
          containerClassName={"paginationButtons"}
          previousLinkClassName={"previousButton"}
