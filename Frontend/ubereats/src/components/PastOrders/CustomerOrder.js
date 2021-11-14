@@ -25,7 +25,7 @@ if(order.customer_name === JSON.parse(localStorage.getItem("user"))["name"]){
           <div className="col-md-12">
             <div className="card-body">
                 <h5 className="card-title">{`${order.restaurant_name}`}</h5>
-                <h5 className="card-text">{`${localStorage.getItem("counter").replace(/[^\w\s]/gi," ")}`}</h5>
+                <h5 className="card-text">{`${(order.total_qty).replace(/[^\w\s]/gi," ")}`}</h5>
                 <h5 className="card-text">{`${order.order_status}`}</h5>
                 <h5 className="card-text">{`${order.date}`}</h5>
                 <h5 className="card-text">{`${order.delivery_status}`}</h5>
