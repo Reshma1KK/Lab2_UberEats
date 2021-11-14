@@ -53,7 +53,7 @@ console.log("instructions",instructions)
 
     const OrderPlaced = () => {
     Axios.defaults.headers.common.authorization=localStorage.getItem("token");
-      Axios.put("http://localhost:3001/CompleteOrder",{
+      Axios.put("http://13.56.184.154:3001/CompleteOrder",{
         restaurant_name:restaurantName,
         customer_name:name,
         current_order:currentOrder,
