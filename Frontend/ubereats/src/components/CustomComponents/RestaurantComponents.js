@@ -51,7 +51,7 @@ function addToFavorites(name,location,id) {
       </path>
       </svg>}
       </button>
-        <div className="card-footer" style={{backgroundColor:"black",textAlign:"center"}}>
+        <div className="card-footer" style={{backgroundColor:"black",textAlign:"center",width:"402px"}}>
           <button type="button" className="btn btn-link" onClick={()=>{getRestaurantLanding(restaurant["_id"],restaurant["restaurantName"])}} style={{color:"white",textDecoration:"none",padding:"0"}}><h5 className="card-title" style={{backgroundColor:"black"}}>{`${restaurant["restaurantName"]}`}</h5></button>
         </div>
     </div>

@@ -62,7 +62,7 @@ console.log("instructions",instructions)
         temp:temp,
         total:totalVal,
         spl_instructions:instructions,
-        total_qty:localStorage.getItem("total_qty"),
+        total_qty:JSON.stringify(localStorage.getItem("counter")),
       }).then(response =>{
         console.log("Added to DB!");
       }).catch(err =>{
