@@ -36,7 +36,7 @@ function Reciept({order}){
               <h5 className="card-text" style={{backgroundColor:"black",color:"white"}}>Total:{`${order.total}`}$</h5>
                 <h5 className="card-title" style={{backgroundColor:"black",color:"white"}}>{`${order.restaurant_name}`}</h5>
                 <h5 className="card-title" style={{backgroundColor:"black",color:"white"}}>{`${order.location}`}</h5>
-                <h5 className="card-text" style={{backgroundColor:"black",color:"white"}}>{`${localStorage.getItem("counter").replace(/[^\w\s]/gi," ")}`}</h5>
+                <h5 className="card-text" style={{backgroundColor:"black",color:"white"}}>{`${(order.total_qty).replace(/[^\w\s]/gi," ")}`}</h5>
                 <h5 className="card-text" style={{backgroundColor:"black",color:"white"}}>{`${order.order_status}`}</h5>
                 <h5 className="card-text" style={{backgroundColor:"black",color:"white"}}>{`${order.date}`}</h5>
                 <h5 className="card-text" style={{backgroundColor:"black",color:"white"}}>Instruction:{`${order.spl_instructions}`}</h5>
