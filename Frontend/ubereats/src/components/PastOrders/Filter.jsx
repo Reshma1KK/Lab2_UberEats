@@ -17,7 +17,7 @@ const[onTheWayIsChecked,setOnTheWayIsChecked] = useState(false);
 const[deliveredIsChecked,setDeliveredIsChecked] = useState(false);
 const[pickUpReadyIsChecked,setPickUpReadyIsChecked] = useState(false);
 const[pickedUpIsChecked,setPickedUpIsChecked] = useState(false);
-
+const[cancelled,setCancelled] = useState(false);
 
 
     useEffect(() => {
@@ -149,6 +149,22 @@ const getAllOrders = () =>{
             Picked Up
             </label>
           </div>
+          <div className="checkbox">
+            <label>
+            <input
+            type="checkbox"
+            className="icheck"
+            value="cancelled"
+            checked={cancelledIsChecked}
+            onChange={
+              (e) => {
+                setCancelled(e.target.checked);
+              }
+            }
+            />
+            Cancelled
+            </label>
+          </div>
 
 
       </div>
@@ -157,7 +173,7 @@ const getAllOrders = () =>{
         console.log(order.order_status)
        if(orderReceivedIsChecked==="" && preparingIsChecked===""
        && pickUpReadyIsChecked==="" && pickedUpIsChecked===""
-       && onTheWayIsChecked==="" && deliveredIsChecked===""){
+       && onTheWayIsChecked==="" && deliveredIsChecked==="" && cancelledIsChecked===""){
          return false;
        }
        else if(((((order.order_status||"").toLowerCase()).includes("Order Received".toLowerCase())) && orderReceivedIsChecked===true)
@@ -165,7 +181,8 @@ const getAllOrders = () =>{
        ((((order.order_status||"").toLowerCase()).includes("On the Way".toLowerCase())) && onTheWayIsChecked===true) ||
        ((((order.order_status||"").toLowerCase()).includes("Delivered".toLowerCase())) && deliveredIsChecked===true) ||
        ((((order.order_status||"").toLowerCase()).includes("Pick Up Ready".toLowerCase())) && pickUpReadyIsChecked===true)
-       || ((((order.order_status||"").toLowerCase()).includes("Picked Up".toLowerCase())) && pickedUpIsChecked===true))  {
+       || ((((order.order_status||"").toLowerCase()).includes("Picked Up".toLowerCase())) && pickedUpIsChecked===true) ||
+     ((((order.order_status||"").toLowerCase()).includes("Cancelled".toLowerCase())) && cancelledIsChecked===true))  {
        return true;
      }}).map(function(order){
       return(<Col sm={12} md={6} lg={4} key={order.id}>
