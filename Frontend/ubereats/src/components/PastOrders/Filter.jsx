@@ -17,7 +17,7 @@ const[onTheWayIsChecked,setOnTheWayIsChecked] = useState(false);
 const[deliveredIsChecked,setDeliveredIsChecked] = useState(false);
 const[pickUpReadyIsChecked,setPickUpReadyIsChecked] = useState(false);
 const[pickedUpIsChecked,setPickedUpIsChecked] = useState(false);
-const[cancelled,setCancelled] = useState(false);
+const[cancelledIsChecked,setCancelledIsChecked] = useState(false);
 
 
     useEffect(() => {
@@ -158,7 +158,7 @@ const getAllOrders = () =>{
             checked={cancelledIsChecked}
             onChange={
               (e) => {
-                setCancelled(e.target.checked);
+                setCancelledIsChecked(e.target.checked);
               }
             }
             />
