@@ -67,7 +67,7 @@ const dishName=cart.dish_name;
       {cart.price}$
      </Col>
      <Col className="d-flex flex-row justify-content-center mt-3 p-2  rounded">
-    { typeof(JSON.parse(localStorage.getItem("counter"))[cart.dish_name]) === "undefined" ? "x" + 1 : "x" +JSON.parse(localStorage.getItem("counter"))[cart.dish_name]  }
+     {JSON.parse(localStorage.getItem("counter"))[cart.dish_name]  }
      </Col>
      </div>
      <hr />

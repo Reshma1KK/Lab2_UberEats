@@ -19,7 +19,6 @@ const [counter,setCounter] = useState(1);
 const [newPrice,setNewPrice]=useState(cart.price);
 
   console.log("cartItemsPresent",cartItemsPresent)
-cartItem_counter[cart.dish_name]=counter;
 
 const increment=()=>{
   setCounter(counter+1);
@@ -38,7 +37,7 @@ const decrement=()=>{
 }
 
 const removeItemFromCart = () =>{
-  Axios.post("http://13.56.184.154:3001/RemoveFromCart",{
+  Axios.post("http://localhost:3001/RemoveFromCart",{
    _id:localStorage.getItem("DeletedDish"),
  })
  const newList = cartItemsPresent.filter((cart) =>cart._id!=localStorage.getItem("DeletedDish"));
@@ -58,6 +57,7 @@ setCounter(1)
 // JSON.parse(localStorage.getItem("counter"))[cart.dish_name])
 
 if(cart.current_order === true){
+  cartItem_counter[cart.dish_name]=counter;
   return(
     <div className="container-fluid" style={{border:"white"}}>
       <div className="row">
